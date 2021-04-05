@@ -1,13 +1,13 @@
-#include <boost/asio.hpp>
+//#include <boost/asio.hpp>
+
 #include <iostream>
 
+#include "EventApplication.h"
+
 int main() {
-  boost::asio::io_context io;
-
-  boost::asio::steady_timer t(io, boost::asio::chrono::seconds(5));
-  t.wait();
-
-  std::cout << "Hello, world!" << std::endl;
-
+  EventApplication app;
+  std::cout << "Starting loop" << std::endl;
+  app.run();
+  std::cout << "loop stopped" << std::endl;
   return 0;
 }

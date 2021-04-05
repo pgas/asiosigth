@@ -12,7 +12,7 @@ find_package(Threads REQUIRED)
 include(CTest)
 enable_testing()
 
-add_executable(asiosigth main.cpp )
+add_executable(asiosigth main.cpp EventApplication.cpp)
 target_link_libraries( asiosigth PRIVATE Threads::Threads  boost)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
